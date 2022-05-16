@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 import model.DAOLawyer;
 import model.Lawyer;
 
-public class Controller11 {//класс контроллер формы добавления адвоката
+public class Controller11 {//класс контроллер формы добавления мастера
 
     @FXML
     private TextField experienceField;
@@ -48,20 +48,20 @@ public class Controller11 {//класс контроллер формы доба
         String errorMessage = "";
 
         if (firstNameField.getText() == null || firstNameField.getText().length() == 0) {
-            errorMessage += "Заполните поле фамилии адвоката!\n";
+            errorMessage += "Заполните поле фамилии мастера!\n";
         }
         if (lastNameField.getText() == null || lastNameField.getText().length() == 0) {
-            errorMessage += "Заполните поле имени адвоката!\n";
+            errorMessage += "Заполните поле имени мастера!\n";
         }
         if (patronymicField.getText() == null || patronymicField.getText().length() == 0) {
-            errorMessage += "Заполните поле отчества адвоката!\n";
+            errorMessage += "Заполните поле отчества мастера!\n";
         }
 
         if (experienceField.getText() == null || experienceField.getText().length() == 0) {
-            errorMessage += "Заполните поле стажа работы адвоката!\n";
+            errorMessage += "Заполните поле стажа работы мастера!\n";
         }
         if (numberPhoneField.getText() == null || numberPhoneField.getText().length() == 0) {
-            errorMessage += "Заполните поле номера телефона адвоката!\n";
+            errorMessage += "Заполните поле номера телефона мастера!\n";
         }
 
         if (errorMessage.length() == 0) {
@@ -98,11 +98,11 @@ public class Controller11 {//класс контроллер формы доба
                 dao.insertLawyer(lawyer);
                 mainController.updateTable();
 
-                mainController.DialogInfo("Адвокат успешно добавлен!");
+                mainController.DialogInfo("Мастер успешно добавлен!");
 
 
             } catch (Exception e) {
-                mainController.DialogError("Не удалось добавить адвоката!");
+                mainController.DialogError("Не удалось добавить мастера!");
 
                 e.printStackTrace();
             }

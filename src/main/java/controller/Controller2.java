@@ -258,13 +258,13 @@ public class Controller2 implements Initializable {//класс контролл
     }
 
     @FXML
-    private void openLawyeerForm() {//открытие формы с адвокатами
+    private void openLawyeerForm() {//открытие формы с мастерами
         try {
             FXMLLoader fxmlLoader = new FXMLLoader();
             fxmlLoader.setLocation(getClass().getResource("/lawyeerForm.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 620, 524);
             Stage stage = new Stage();
-            stage.setTitle("Данные адвокатов");
+            stage.setTitle("Данные мастеров");
             stage.setScene(scene);
             stage.setResizable(false);
             stage.getIcons().add(new Image(Controller2.class.getResourceAsStream("/icon.png")));

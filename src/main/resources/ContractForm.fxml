@@ -32,7 +32,7 @@
                   <TableColumn fx:id="idContract" editable="false" prefWidth="40.0" resizable="false" sortable="false" text="№ " />
                   <TableColumn fx:id="idClient" editable="false" minWidth="0.0" prefWidth="158.0" resizable="false" sortable="false" text="Клиент" />
                   <TableColumn fx:id="idService" editable="false" minWidth="0.0" prefWidth="197.0" resizable="false" sortable="false" text="Услуга" />
-                  <TableColumn fx:id="idEmployee" editable="false" minWidth="0.0" prefWidth="164.0" resizable="false" sortable="false" text="Адвокат" />
+                  <TableColumn fx:id="idEmployee" editable="false" minWidth="0.0" prefWidth="164.0" resizable="false" sortable="false" text="Мастер" />
                   <TableColumn fx:id="date" editable="false" minWidth="0.0" prefWidth="131.0" resizable="false" sortable="false" text="Дата заключения" />
                   <TableColumn fx:id="sum" editable="false" minWidth="0.0" prefWidth="136.0" resizable="false" sortable="false" text="Сумма договора" />
                </columns>
@@ -51,7 +51,7 @@
                   <Font name="Segoe UI" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="592.0" layoutY="368.0" prefHeight="23.0" prefWidth="72.0" text="Адвокат" textAlignment="CENTER" textFill="#5383ff">
+            <Label layoutX="592.0" layoutY="368.0" prefHeight="23.0" prefWidth="72.0" text="Мастер" textAlignment="CENTER" textFill="#5383ff">
                <font>
                   <Font name="Segoe UI" size="18.0" />
                </font>

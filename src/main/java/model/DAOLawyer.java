@@ -74,7 +74,7 @@ public class DAOLawyer {//Класс запросов с таблицей "со�
 
     public void updateLawyer(Lawyer lawyer) {//запрос на изменение  данных из адвоката
 
-        String sql = "update employee set firstname=?, lastname=?, patronymic=?, experience=?, phonenumber=? where idemployee=?";
+        String sql = "update employee set firstname =?, lastname=?, patronymic=?, experience=?, phonenumber=? where idemployee=?";
         try {
             PreparedStatement statement = connection.prepareStatement(sql);
 

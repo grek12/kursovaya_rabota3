@@ -34,9 +34,9 @@
                   <MenuItem mnemonicParsing="false" onAction="#deleteService" text="Удалить выбранную услугу" />
             </items>
           </Menu>
-            <Menu mnemonicParsing="false" text="Адвокат">
+            <Menu mnemonicParsing="false" text="Мастер">
                <items>
-                  <MenuItem mnemonicParsing="false" onAction="#openLawyeerForm" text="Данные о адвокатах" />
+                  <MenuItem mnemonicParsing="false" onAction="#openLawyeerForm" text="Данные о мастерах" />
                </items>
             </Menu>
         </menus>

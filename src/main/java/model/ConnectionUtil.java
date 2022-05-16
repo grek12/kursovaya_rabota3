@@ -11,7 +11,7 @@ public class ConnectionUtil {//класс подключения к бд
 
     public static Connection conDB() {
         try {
-            Connection con = DriverManager.getConnection("jdbc:postgresql://localhost/lawyerCompany", "postgres", "42a98w06");
+            Connection con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/DB_SK", "postgres", "42a98w06");
             return con;
         } catch (SQLException ex) {
             System.err.println("ConnectionUtil : " + ex.getMessage());

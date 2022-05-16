@@ -94,7 +94,7 @@ public class LoginController implements Initializable {//класс контро
             status = "Ошибка";
         } else {
 
-            String sql = "SELECT * FROM admin Where login = ? and password = ?";
+            String sql = "SELECT * FROM admin Where login= ? and password=?";
             try {
                 preparedStatement = con.prepareStatement(sql);
                 preparedStatement.setString(1, login);

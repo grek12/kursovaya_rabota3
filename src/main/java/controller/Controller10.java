@@ -22,7 +22,7 @@ import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class Controller10 implements Initializable {//класс контроллер формы с адвокатами
+public class Controller10 implements Initializable {//класс контроллер формы с мастерами
     @FXML
     private TableView<Lawyer> tableLawyer;
 
@@ -66,13 +66,13 @@ public class Controller10 implements Initializable {//класс контрол�
     }//обновление таблицы
 
     @FXML
-    private void addLawyer() {//открытие форы добавления адвоката
+    private void addLawyer() {//открытие форы добавления мастера
         try {
             FXMLLoader fxmlLoader = new FXMLLoader();
             fxmlLoader.setLocation(getClass().getResource("/addLawyer.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 420, 253);
             Stage stage = new Stage();
-            stage.setTitle("Добавление нового адвоката");
+            stage.setTitle("Добавление нового мастера");
             stage.setScene(scene);
             stage.setResizable(false);
             stage.getIcons().add(new Image(Controller10.class.getResourceAsStream("/icon.png")));
@@ -89,23 +89,23 @@ public class Controller10 implements Initializable {//класс контрол�
 
     }
 
-    public void updateLawyer(ActionEvent event) {//открытие формы изменение данных адвоката
+    public void updateLawyer(ActionEvent event) {//открытие формы изменение данных мастера
         Lawyer lawyer = tableLawyer.getSelectionModel().getSelectedItem();
         if (lawyer != null) {
             updateLawyer(lawyer);
         } else {
-            DialogError("Адвокат не выбран");
+            DialogError("Мастер не выбран");
         }
     }
 
     @FXML
-    public void updateLawyer(Lawyer lawyer) {//открытие формы изменение данных адвоката
+    public void updateLawyer(Lawyer lawyer) {//открытие формы изменение данных мастера
         try {
             FXMLLoader fxmlLoader = new FXMLLoader();
             fxmlLoader.setLocation(getClass().getResource("/updateLawyer.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 420, 303);
             Stage stage = new Stage();
-            stage.setTitle("Изменение данных адвоката");
+            stage.setTitle("Изменение данных мастера");
             stage.setScene(scene);
             stage.setResizable(false);
             stage.getIcons().add(new Image(Controller10.class.getResourceAsStream("/icon.png")));
@@ -123,17 +123,17 @@ public class Controller10 implements Initializable {//класс контрол�
     }
 
     @FXML
-    private void deleteLawyer() {//удаление адвоката
+    private void deleteLawyer() {//удаление мастера
         Lawyer lawyer = tableLawyer.getSelectionModel().getSelectedItem();
         if (lawyer == null) {
-            DialogError("Удаление невозможно, список адвокатов пуст!");
+            DialogError("Удаление невозможно, список мастеров пуст!");
         } else {
-            if (DialogConf("Подтверждаете удаление адвоката?")) {
+            if (DialogConf("Подтверждаете удаление мастера?")) {
 
                 try {
 
                     dao.deleteLawyer(Integer.valueOf(lawyer.getId()));
-                    DialogInfo("Адвокат успешно удален!");
+                    DialogInfo("Мастер успешно удален!");
                     updateTable();
 
                 } catch (Exception e) {

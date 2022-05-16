@@ -21,7 +21,7 @@ public class Main extends Application {//Главный метод main
     public void start(Stage stage) throws Exception {//запуск формы авторизации
         Parent root = FXMLLoader.load(getClass().getResource("/Login.fxml"));
         stage.initStyle(StageStyle.DECORATED);
-        stage.setTitle("Адвокатская контора");
+        stage.setTitle("Салон красоты");
         stage.setMaximized(false);
         stage.setResizable(false);
         root.setOnMousePressed(new EventHandler<MouseEvent>() {//установка курсора
@@ -41,7 +41,6 @@ public class Main extends Application {//Главный метод main
         });
 
         Scene scene = new Scene(root);
-        stage.getIcons().add(new Image(Main.class.getResourceAsStream("/icon.png")));
         stage.setScene(scene);
         stage.show();
     }
