@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="517.0" prefWidth="711.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller2">
+   <children>
+      <MenuBar style="-fx-background-color: #fff;" stylesheets="@fullpackstyling.css">
+        <menus>
+          <Menu mnemonicParsing="false" text="Клиент">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#openClientForm" text="Данные о клиентах" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Договор">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#openContractForm" text="Заключенные договора" />
+                  <MenuItem mnemonicParsing="false" onAction="#openAddContractForm" text="Заключить договор" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Услуга">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#addService" text="Добавить услугу" />
+                  <MenuItem mnemonicParsing="false" onAction="#updateService" text="Изменить данные услуги" />
+                  <MenuItem mnemonicParsing="false" onAction="#deleteService" text="Удалить выбранную услугу" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Адвокат">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#openLawyeerForm" text="Данные о адвокатах" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane prefHeight="494.0" prefWidth="711.0" style="-fx-background-color: #fff;">
+         <children>
+            <TableView fx:id="tableService" layoutX="14.0" layoutY="36.0" onMouseClicked="#clickItem" prefHeight="350.0" prefWidth="431.0" stylesheets="@fullpackstyling.css">
+              <columns>
+                <TableColumn fx:id="idService" editable="false" prefWidth="49.0" resizable="false" sortable="false" text="№ " />
+                <TableColumn fx:id="nameService" editable="false" minWidth="0.0" prefWidth="275.0" resizable="false" sortable="false" text="Услуга" />
+                  <TableColumn fx:id="priceService" editable="false" minWidth="0.0" prefWidth="87.0" resizable="false" sortable="false" text="Стоимость" />
+              </columns>
+            </TableView>
+            <TextField fx:id="txtNameService" layoutX="131.0" layoutY="398.0" onKeyReleased="#searchNameservice" stylesheets="@fullpackstyling.css" />
+            <TextField fx:id="txtPriceService" layoutX="131.0" layoutY="432.0" onKeyReleased="#searchPriceservice" />
+            <Label layoutX="14.0" layoutY="398.0" text="Поиск по названию" textFill="#5383ff">
+               <font>
+                  <Font name="Segoe UI" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="433.0" text="Поиск по цене" textFill="#5383ff">
+               <font>
+                  <Font name="Segoe UI" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="175.0" layoutY="9.0" prefHeight="23.0" prefWidth="110.0" text="Список услуг" textAlignment="CENTER" textFill="#5383ff">
+               <font>
+                  <Font name="Segoe UI" size="18.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="description" editable="false" layoutX="472.0" layoutY="36.0" prefHeight="200.0" prefWidth="200.0" wrapText="true" />
+            <Label layoutX="498.0" layoutY="9.0" prefHeight="23.0" prefWidth="149.0" text="Описание услуги" textAlignment="CENTER" textFill="#5383ff">
+               <font>
+                  <Font name="Segoe UI" size="18.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+   </children>
+</VBox>

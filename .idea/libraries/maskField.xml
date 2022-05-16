@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="maskField">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../maskField/target/maskField.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

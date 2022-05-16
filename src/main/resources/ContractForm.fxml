@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="485.0" prefWidth="884.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller8">
+   <children>
+      <AnchorPane prefHeight="492.0" prefWidth="884.0" style="-fx-background-color: #fff;">
+         <children>
+            <TableView fx:id="tableClient" layoutX="26.0" layoutY="401.0" prefHeight="61.0" prefWidth="395.0" stylesheets="@fullpackstyling.css">
+              <columns>
+                <TableColumn fx:id="idClient2" editable="false" prefWidth="33.0" resizable="false" sortable="false" text="№ " />
+                <TableColumn fx:id="lastName" editable="false" minWidth="0.0" prefWidth="79.0" resizable="false" sortable="false" text="Фамилия" />
+                  <TableColumn fx:id="firstName" editable="false" minWidth="0.0" prefWidth="79.0" resizable="false" sortable="false" text="Имя" />
+                  <TableColumn fx:id="patronymic" editable="false" minWidth="0.0" prefWidth="91.0" resizable="false" sortable="false" text="Отчество" />
+                  <TableColumn fx:id="numberPhone" editable="false" minWidth="0.0" prefWidth="109.0" resizable="false" sortable="false" text="Номер телефона" />
+              </columns>
+            </TableView>
+            <Label layoutX="350.0" layoutY="14.0" prefHeight="23.0" prefWidth="160.0" text="Список договоров" textAlignment="CENTER" textFill="#5383ff">
+               <font>
+                  <Font name="Segoe UI" size="18.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tableContract" layoutX="26.0" layoutY="53.0" onMouseClicked="#clickItem" prefHeight="220.0" prefWidth="841.0" stylesheets="@fullpackstyling.css">
+               <columns>
+                  <TableColumn fx:id="idContract" editable="false" prefWidth="40.0" resizable="false" sortable="false" text="№ " />
+                  <TableColumn fx:id="idClient" editable="false" minWidth="0.0" prefWidth="158.0" resizable="false" sortable="false" text="Клиент" />
+                  <TableColumn fx:id="idService" editable="false" minWidth="0.0" prefWidth="197.0" resizable="false" sortable="false" text="Услуга" />
+                  <TableColumn fx:id="idEmployee" editable="false" minWidth="0.0" prefWidth="164.0" resizable="false" sortable="false" text="Адвокат" />
+                  <TableColumn fx:id="date" editable="false" minWidth="0.0" prefWidth="131.0" resizable="false" sortable="false" text="Дата заключения" />
+                  <TableColumn fx:id="sum" editable="false" minWidth="0.0" prefWidth="136.0" resizable="false" sortable="false" text="Сумма договора" />
+               </columns>
+            </TableView>
+            <TableView fx:id="tableLawyer" cache="true" layoutX="430.0" layoutY="401.0" prefHeight="61.0" prefWidth="440.0" stylesheets="@fullpackstyling.css">
+               <columns>
+                  <TableColumn fx:id="idLawyer" editable="false" prefWidth="33.0" resizable="false" sortable="false" text="№ " />
+                  <TableColumn fx:id="lastName1" editable="false" minWidth="0.0" prefWidth="106.0" resizable="false" sortable="false" text="Фамилия" />
+                  <TableColumn fx:id="firstName1" editable="false" minWidth="0.0" prefWidth="95.0" resizable="false" sortable="false" text="Имя" />
+                  <TableColumn fx:id="patronymic1" editable="false" minWidth="0.0" prefWidth="88.0" resizable="false" sortable="false" text="Отчество" />
+                  <TableColumn fx:id="numberPhone1" editable="false" minWidth="0.0" prefWidth="112.0" resizable="false" sortable="false" text="Номер телефона" />
+               </columns>
+            </TableView>
+            <Label layoutX="193.0" layoutY="368.0" prefHeight="23.0" prefWidth="62.0" text="Клиент" textAlignment="CENTER" textFill="#5383ff">
+               <font>
+                  <Font name="Segoe UI" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="592.0" layoutY="368.0" prefHeight="23.0" prefWidth="72.0" text="Адвокат" textAlignment="CENTER" textFill="#5383ff">
+               <font>
+                  <Font name="Segoe UI" size="18.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="datepick2" layoutX="117.0" layoutY="288.0" onKeyPressed="#searchDate" />
+            <Label layoutX="32.0" layoutY="293.0" text="Поиск по дате" textFill="#5383ff">
+               <font>
+                  <Font name="Segoe UI" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="clientNameField" layoutX="430.0" layoutY="288.0" onKeyPressed="#searchClient" promptText="Фамилия клиента" />
+            <Label layoutX="323.0" layoutY="293.0" text="Поиск по клиенту" textFill="#5383ff">
+               <font>
+                  <Font name="Segoe UI" size="12.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+   </children>
+</VBox>
